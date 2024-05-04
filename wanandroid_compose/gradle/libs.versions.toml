@@ -1,16 +1,69 @@
 [versions]
+accompanistPlaceholderMaterial = "0.34.0"
+accompanistFlowlayout = "0.34.0"
+accompanistSwiperefresh = "0.34.0"
+accompanistPagerIndicators = "0.34.0"
+accompanistPager = "0.34.0"
+accompanistGlide = "0.15.0"
+accompanistSystemuicontroller = "0.34.0"
+accompanistCoil = "0.15.0"
+accompanistInsets = "0.30.1"
 agp = "8.3.2"
-kotlin = "1.9.0"
-coreKtx = "1.10.1"
-junit = "4.14-SNAPSHOT"
+appcompat = "1.6.1"
+constraintlayoutCompose = "1.0.1"
+datastoreCore = "1.0.0"
+datastorePreferences = "1.0.0"
+gson = "2.10.1"
+converterGson = "2.9.0"
+hiltCompiler = "1.2.0"
+hiltLifecycleViewmodel = "1.0.0-alpha03"
+hiltNavigationCompose = "1.2.0"
+hiltAndroidCompiler = "2.47"
+hiltAndroid = "2.51.1"
+kotlin = "1.9.10"
+coreKtx = "1.12.0"
+junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.6.1"
-activityCompose = "1.7.0"
+kotlinReflect = "1.9.22"
+lifecycleRuntimeKtx = "2.7.0"
+activityCompose = "1.8.2"
 composeBom = "2023.08.00"
+navigationCompose = "2.7.7"
+pagingCompose = "3.2.1"
+pagingCommon = "3.2.1"
+pagingRuntime = "3.2.1"
+retrofit = "2.9.0"
+googleKsp = "1.9.10-1.0.13"
+googleHilt = "2.47"
 
 [libraries]
+accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanistPlaceholderMaterial" }
+accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanistFlowlayout" }
+accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanistSwiperefresh" }
+accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanistPagerIndicators" }
+accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager" }
+accompanist-glide = { module = "com.google.accompanist:accompanist-glide", version.ref = "accompanistGlide" }
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
+accompanist-coil = { module = "com.google.accompanist:accompanist-coil", version.ref = "accompanistCoil" }
+accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanistInsets" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-datastore-core = { module = "androidx.datastore:datastore-core", version.ref = "datastoreCore" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompiler" }
+androidx-hilt-lifecycle-viewmodel = { module = "androidx.hilt:hilt-lifecycle-viewmodel", version.ref = "hiltLifecycleViewmodel" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+androidx-navigation-navigation-safe-args-gradle-plugin3 = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationCompose" }
+androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "pagingCompose" }
+androidx-paging-common = { module = "androidx.paging:paging-common", version.ref = "pagingCommon" }
+androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "pagingRuntime" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -24,8 +77,12 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlinReflect" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "googleKsp" }
+google-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "googleHilt" }
 
