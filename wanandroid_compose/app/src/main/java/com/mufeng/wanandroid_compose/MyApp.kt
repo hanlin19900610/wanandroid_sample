@@ -3,8 +3,13 @@ package com.mufeng.wanandroid_compose
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import com.mufeng.wanandroid_compose.utils.DataStoreUtils
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.CoroutineName
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import timber.log.Timber
 
 /**
  * 1. 所有使用 Hilt 的 App 必须包含 一个使用 @HiltAndroidApp 注解的 Application
@@ -18,14 +23,33 @@ import dagger.hilt.android.HiltAndroidApp
 class MyApp: Application() {
 
     companion object {
-        @SuppressLint("StaticFieldLeak")
-        lateinit var CONTEXT: Context
+        lateinit var INSTANCE: MyApp
+            private set
+
+        val applicationContext: Context get() { return INSTANCE.applicationContext }
+
+        // 全局CoroutineScope
+        val mCoroutineScope by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
+            CoroutineScope(
+                SupervisorJob()
+                        + Dispatchers.Default
+                        + CoroutineName("MyAppJob")
+                        + CoroutineExceptionHandler { _, throwable ->
+                    throwable.printStackTrace()
+                })
+        }
     }
 
     override fun onCreate() {
         super.onCreate()
-        CONTEXT = this
-        DataStoreUtils.init(this)
+        INSTANCE = this
+        // 策略初始化第三方依赖
+        initDepends()
     }
+
+    private fun initDepends() {
+        Timber.plant(Timber.DebugTree())
+    }
+
 
 }
