@@ -2,21 +2,25 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:riverpod/src/framework.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
+import 'package:wanandroid_flutter/app/app.dart';
 
 
 import '../../../lib.dart';
 
 class HttpConfigImpl implements IHttpConfig {
   @override
-  BaseError getDioError(Object obj) {
+  OtherError getDioError(Object obj) {
     if (obj.runtimeType == DioException) {
       if ((obj as DioException).type == DioExceptionType.badResponse) {
         final response = obj.response;
         if (response?.statusCode == -1001) {
-          return NeedLogin();
+          return OtherError(
+            statusCode: response?.statusCode ?? kUnAuthorizedStatusCode,
+            statusMessage: response?.statusMessage ?? '未知错误',
+          );
         } else {
           return OtherError(
-            statusCode: response?.statusCode ?? -1,
+            statusCode: response?.statusCode ?? kUnknownStatusCode,
             statusMessage: response?.statusMessage ?? '未知错误',
           );
         }
@@ -24,24 +28,24 @@ class HttpConfigImpl implements IHttpConfig {
           obj.type == DioExceptionType.sendTimeout ||
           obj.type == DioExceptionType.receiveTimeout) {
         return OtherError(
-          statusCode: -1,
+          statusCode: kTimeoutStatusCode,
           statusMessage: '请求超时',
         );
       } else if (obj.type == DioExceptionType.cancel) {
         return OtherError(
-          statusCode: -1,
+          statusCode: kCancelRequestStatusCode,
           statusMessage: '请求被取消',
         );
       } else {
         return OtherError(
-          statusCode: -1,
+          statusCode: kUnknownStatusCode,
           statusMessage: '未知错误',
         );
       }
     }
 
     return OtherError(
-      statusCode: -1,
+      statusCode: kUnknownStatusCode,
       statusMessage: '未知错误',
     );
   }
@@ -55,7 +59,8 @@ class HttpConfigImpl implements IHttpConfig {
       var cookieManager = CookieManager(cookieJar);
       interceptors.add(cookieManager);
     }
-
+    interceptors.add(NetWorkInterceptor(ref: ref));
+    interceptors.add(ErrorInterceptor(ref: ref));
     return interceptors;
 
   }

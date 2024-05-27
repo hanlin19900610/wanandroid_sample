@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:wanandroid_flutter/lib.dart';
 
 import '../../../core/core.dart';
 
@@ -19,6 +20,18 @@ abstract class ApiClient {
   factory ApiClient({required Dio dio, String? baseUrl}) {
     return _ApiClient(dio, baseUrl: baseUrl);
   }
+
+  /// 轮播图列表
+  @GET(ApiUrl.BANNER_LIST)
+  Future<List<HomeBannerBean>> getBannerList();
+
+  /// 置顶文章列表
+  @GET('/article/top/json')
+  Future<List<ArticleBean>> getArticleTopList();
+
+  /// 文章列表
+  @GET('/article/list/{page}/json')
+  Future<PaginationData<ArticleBean>> getArticleList(@Path() int page);
 
 }
 

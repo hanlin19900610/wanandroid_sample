@@ -10,5 +10,5 @@ abstract class IHttpConfig {
   List<Interceptor> getInterceptors(Ref ref);
 
   /// 根据后端返回的code返回不同的错误类
-  BaseError getDioError(Object obj);
+  OtherError getDioError(Object obj);
 }

@@ -117,11 +117,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginInfoInvalidTips": m6,
         "loginSuccess": MessageLookupByLibrary.simpleMessage("登录成功"),
         "logout": MessageLookupByLibrary.simpleMessage("退出登录"),
+        "mine": MessageLookupByLibrary.simpleMessage("我的"),
         "minutesAgo": m7,
         "monthsAgo": m8,
         "myCollections": MessageLookupByLibrary.simpleMessage("我的收藏"),
         "myPoints": MessageLookupByLibrary.simpleMessage("我的积分"),
         "myShare": MessageLookupByLibrary.simpleMessage("我的分享"),
+        "nav": MessageLookupByLibrary.simpleMessage("导航"),
         "networkException": MessageLookupByLibrary.simpleMessage("网络异常"),
         "networkExceptionMsg":
             MessageLookupByLibrary.simpleMessage("请检查您当前的网络连接"),

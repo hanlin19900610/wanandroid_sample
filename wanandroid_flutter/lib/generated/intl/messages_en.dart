@@ -132,11 +132,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginSuccess":
             MessageLookupByLibrary.simpleMessage("Login Successful"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "mine": MessageLookupByLibrary.simpleMessage("Mine"),
         "minutesAgo": m7,
         "monthsAgo": m8,
         "myCollections": MessageLookupByLibrary.simpleMessage("My Collections"),
         "myPoints": MessageLookupByLibrary.simpleMessage("My Points"),
         "myShare": MessageLookupByLibrary.simpleMessage("My Share"),
+        "nav": MessageLookupByLibrary.simpleMessage("Nav"),
         "networkException":
             MessageLookupByLibrary.simpleMessage("Network Exception"),
         "networkExceptionMsg": MessageLookupByLibrary.simpleMessage(

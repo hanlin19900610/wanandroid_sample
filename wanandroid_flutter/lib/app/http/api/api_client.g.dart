@@ -38,6 +38,94 @@ class _ApiClient implements ApiClient {
 
   String? baseUrl;
 
+  @override
+  Future<List<HomeBannerBean>> getBannerList() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<HomeBannerBean>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/banner/json',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var value = _result.data!
+        .map((dynamic i) => HomeBannerBean.fromJson(i as Map<String, dynamic>))
+        .toList();
+    return value;
+  }
+
+  @override
+  Future<List<ArticleBean>> getArticleTopList() async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<ArticleBean>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/article/top/json',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    var value = _result.data!
+        .map((dynamic i) => ArticleBean.fromJson(i as Map<String, dynamic>))
+        .toList();
+    return value;
+  }
+
+  @override
+  Future<PaginationData<ArticleBean>> getArticleList(int page) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<PaginationData<ArticleBean>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/article/list/${page}/json',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = PaginationData<ArticleBean>.fromJson(
+      _result.data!,
+      (json) => ArticleBean.fromJson(json as Map<String, dynamic>),
+    );
+    return value;
+  }
+
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
         !(requestOptions.responseType == ResponseType.bytes ||
@@ -110,7 +198,7 @@ final appCookieJarProvider =
 );
 
 typedef _$AppCookieJar = Notifier<PersistCookieJar>;
-String _$networkHash() => r'7ad7b81341929c41861deb6dd5167a46c4d763a3';
+String _$networkHash() => r'e602f104bfc0eb521e6ef1f3e103759708e2c335';
 
 /// See also [Network].
 @ProviderFor(Network)

@@ -68,6 +68,8 @@
 
   "project": "项目",
   "projectType": "项目类型",
+  "nav": "导航",
+  "mine": "我的",
 
   "searchForSomething": "搜点什么吧",
   "search": "搜索",

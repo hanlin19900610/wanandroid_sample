@@ -112,6 +112,8 @@
 
   "project": "Project",
   "projectType": "Project Type",
+  "nav": "Nav",
+  "mine": "Mine",
 
   "searchForSomething": "Search for something",
   "search": "Search",

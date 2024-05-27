@@ -533,6 +533,26 @@ class S {
     );
   }
 
+  /// `Nav`
+  String get nav {
+    return Intl.message(
+      'Nav',
+      name: 'nav',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mine`
+  String get mine {
+    return Intl.message(
+      'Mine',
+      name: 'mine',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Search for something`
   String get searchForSomething {
     return Intl.message(
