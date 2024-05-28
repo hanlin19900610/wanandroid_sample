@@ -267,7 +267,9 @@
   "collected": "Collected",
   "collect": "Collect",
   "recommend": "Recommend",
+  "weChatOfficialAccount": "WeChat Official Acc1ount",
   "desktop": "Desktop",
+  "change": "Change",
 
   "articleNotFound": "Article not found",
   "articleNotFoundMsg": "Can't find the article",

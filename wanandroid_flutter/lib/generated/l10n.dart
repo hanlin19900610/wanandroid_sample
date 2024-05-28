@@ -1247,11 +1247,31 @@ class S {
     );
   }
 
+  /// `WeChat Official Acc1ount`
+  String get weChatOfficialAccount {
+    return Intl.message(
+      'WeChat Official Acc1ount',
+      name: 'weChatOfficialAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Desktop`
   String get desktop {
     return Intl.message(
       'Desktop',
       name: 'desktop',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get change {
+    return Intl.message(
+      'Change',
+      name: 'change',
       desc: '',
       args: [],
     );

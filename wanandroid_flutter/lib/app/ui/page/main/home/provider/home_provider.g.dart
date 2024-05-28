@@ -6,7 +6,23 @@ part of 'home_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$homeArticleListHash() => r'e429f7bc39ab9fbca05286720ef316405a24ef24';
+String _$homeWxArticleListHash() => r'd627a2ef75f85a35d0230f767014047e9c10882e';
+
+/// See also [HomeWxArticleList].
+@ProviderFor(HomeWxArticleList)
+final homeWxArticleListProvider = AutoDisposeAsyncNotifierProvider<
+    HomeWxArticleList, List<WxArticleBean>>.internal(
+  HomeWxArticleList.new,
+  name: r'homeWxArticleListProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$homeWxArticleListHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$HomeWxArticleList = AutoDisposeAsyncNotifier<List<WxArticleBean>>;
+String _$homeArticleListHash() => r'b15a46b01a3c1eb024299385bfcf4390edef4e5f';
 
 /// Copied from Dart SDK
 class _SystemHash {

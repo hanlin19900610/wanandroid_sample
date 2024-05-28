@@ -74,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "backHome": MessageLookupByLibrary.simpleMessage("回到首页"),
         "browser": MessageLookupByLibrary.simpleMessage("浏览器"),
         "cancel": MessageLookupByLibrary.simpleMessage("取消"),
+        "change": MessageLookupByLibrary.simpleMessage("换一换"),
         "clear": MessageLookupByLibrary.simpleMessage("清理"),
         "clearCache": MessageLookupByLibrary.simpleMessage("清除缓存"),
         "clearCacheWarning":
@@ -203,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "username": MessageLookupByLibrary.simpleMessage("用户名"),
         "usernameEmptyTips": MessageLookupByLibrary.simpleMessage("请输入用户名"),
         "warning": MessageLookupByLibrary.simpleMessage("警告"),
+        "weChatOfficialAccount": MessageLookupByLibrary.simpleMessage("公众号"),
         "yearsAgo": m12
       };
 }

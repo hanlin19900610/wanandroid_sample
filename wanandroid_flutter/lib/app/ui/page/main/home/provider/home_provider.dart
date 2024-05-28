@@ -6,6 +6,34 @@ import 'package:wanandroid_flutter/lib.dart';
 part 'home_provider.g.dart';
 
 @riverpod
+class HomeWxArticleList extends _$HomeWxArticleList{
+  late ApiClient _apiClient;
+  // 微信公众号
+  List<WxArticleBean> wxArticleList = [];
+  List<WxArticleBean> currentWxArticleList = [];
+
+  void changeWxArticle() {
+    currentWxArticleList.clear();
+    currentWxArticleList.addAll(wxArticleList.random(4));
+  }
+
+  @override
+  Future<List<WxArticleBean>> build() async{
+    _apiClient = ref.read(networkProvider);
+    wxArticleList = await getWxArticleList();
+    currentWxArticleList.clear();
+    currentWxArticleList.addAll(wxArticleList.random(4));
+    return currentWxArticleList;
+  }
+
+  Future<List<WxArticleBean>> getWxArticleList() async {
+    List<WxArticleBean> list = [];
+    list = await _apiClient.getWxArticleList();
+    return list;
+  }
+}
+
+@riverpod
 class HomeArticleList extends _$HomeArticleList
     with LoadMoreMixin<ArticleBean> {
   late ApiClient _apiClient;
@@ -14,6 +42,9 @@ class HomeArticleList extends _$HomeArticleList
 
   // 轮播图
   List<HomeBannerBean> bannerList = [];
+
+
+
 
   @override
   Future<List<ArticleBean>> build({
@@ -25,6 +56,7 @@ class HomeArticleList extends _$HomeArticleList
       if (pageNum == 0) {
         bannerList = await getBannerList();
         articleTopList = await getArticleTopList();
+        ref.read(homeWxArticleListProvider.notifier).future;
       }
       var articlePage = await _apiClient.getArticleList(pageNum);
       if (pageNum == 0) {
@@ -56,6 +88,7 @@ class HomeArticleList extends _$HomeArticleList
     list = await _apiClient.getBannerList();
     return list;
   }
+
 
   @override
   Future<List<ArticleBean>> buildMore(int pageNum, int pageSize) =>

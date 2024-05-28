@@ -5,6 +5,7 @@ import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 import 'package:wanandroid_flutter/app/ui/page/main/home/provider/home_provider.dart';
 import 'package:wanandroid_flutter/app/widget/loading_widget.dart';
 import 'package:wanandroid_flutter/lib.dart';
@@ -82,6 +83,50 @@ class _RecommendPageState extends ConsumerState<RecommendPage>
             autoplay: true,
             duration: 800,
             onTap: (int index) {},
+          ),
+        ).sliver(),
+
+        /// 公众号列表
+        Container(
+          width: double.infinity,
+          margin: EdgeInsets.only(top: 10.h, left: 10.w, right: 10.w),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15.r),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(S.of(context).weChatOfficialAccount, style: TextStyle(color: Colors.black, fontSize: 16.sp, fontWeight: FontWeight.bold),),
+                  TDButton(
+                    text: S.of(context).change,
+                    type: TDButtonType.text,
+                    size: TDButtonSize.small,
+                    textStyle: TextStyle(color: Colors.grey, fontSize: 12.sp),
+                    iconWidget: Icon(Icons.change_circle, color: Colors.grey.withOpacity(0.6),),
+                    onTap: (){
+                      ref.read(homeWxArticleListProvider.notifier).changeWxArticle();
+                    },
+                  ),
+                ],
+              ),
+              MFSizedBox.height(5.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ...ref.watch(homeWxArticleListProvider.notifier).currentWxArticleList.map((e) => Container(
+                    width: 50,
+                    height: 100,
+                    color: Colors.red,
+                    child: Text(e.name??''),
+                  ))
+                ],
+              ),
+            ],
           ),
         ).sliver(),
 

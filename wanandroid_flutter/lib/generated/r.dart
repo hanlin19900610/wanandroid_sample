@@ -11,6 +11,20 @@ class R {
   static const String imagesTimeout = 'assets/images/timeout.png';
   static const String imagesUnknownError = 'assets/images/unknown_error.png';
   static const String imagesUnknownPath = 'assets/images/unknown_path.png';
+  static const String imagesWxarticle408 = 'assets/images/wxarticle408.png';
+  static const String imagesWxarticle409 = 'assets/images/wxarticle409.png';
+  static const String imagesWxarticle410 = 'assets/images/wxarticle410.png';
+  static const String imagesWxarticle411 = 'assets/images/wxarticle411.png';
+  static const String imagesWxarticle413 = 'assets/images/wxarticle413.png';
+  static const String imagesWxarticle414 = 'assets/images/wxarticle414.png';
+  static const String imagesWxarticle415 = 'assets/images/wxarticle415.png';
+  static const String imagesWxarticle416 = 'assets/images/wxarticle416.png';
+  static const String imagesWxarticle417 = 'assets/images/wxarticle417.png';
+  static const String imagesWxarticle420 = 'assets/images/wxarticle420.png';
+  static const String imagesWxarticle421 = 'assets/images/wxarticle421.png';
+  static const String imagesWxarticle427 = 'assets/images/wxarticle427.png';
+  static const String imagesWxarticle428 = 'assets/images/wxarticle428.png';
+  static const String imagesWxarticle434 = 'assets/images/wxarticle434.png';
   static const String jsonTheme = 'assets/json/theme.json';
 
 }

@@ -152,6 +152,8 @@
   "collect": "收藏",
   "desktop": "桌面",
   "recommend": "推荐",
+  "weChatOfficialAccount": "公众号",
+  "change": "换一换",
 
   "articleNotFound": "文章不存在",
   "articleNotFoundMsg": "啊咧咧，文章找不到啦",

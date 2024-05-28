@@ -1578,3 +1578,427 @@ abstract class _PaginationData<T> implements PaginationData<T> {
   _$$PaginationDataImplCopyWith<T, _$PaginationDataImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+WxArticleBean _$WxArticleBeanFromJson(Map<String, dynamic> json) {
+  return _WxArticleBean.fromJson(json);
+}
+
+/// @nodoc
+mixin _$WxArticleBean {
+  List<dynamic>? get articleList => throw _privateConstructorUsedError;
+  set articleList(List<dynamic>? value) => throw _privateConstructorUsedError;
+  String? get author => throw _privateConstructorUsedError;
+  set author(String? value) => throw _privateConstructorUsedError;
+  List<dynamic>? get children => throw _privateConstructorUsedError;
+  set children(List<dynamic>? value) => throw _privateConstructorUsedError;
+  int? get courseId => throw _privateConstructorUsedError;
+  set courseId(int? value) => throw _privateConstructorUsedError;
+  String? get cover => throw _privateConstructorUsedError;
+  set cover(String? value) => throw _privateConstructorUsedError;
+  String? get desc => throw _privateConstructorUsedError;
+  set desc(String? value) => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  set id(int? value) => throw _privateConstructorUsedError;
+  String? get lisense => throw _privateConstructorUsedError;
+  set lisense(String? value) => throw _privateConstructorUsedError;
+  String? get lisenseLink => throw _privateConstructorUsedError;
+  set lisenseLink(String? value) => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  set name(String? value) => throw _privateConstructorUsedError;
+  int? get order => throw _privateConstructorUsedError;
+  set order(int? value) => throw _privateConstructorUsedError;
+  int? get parentChapterId => throw _privateConstructorUsedError;
+  set parentChapterId(int? value) => throw _privateConstructorUsedError;
+  int? get type => throw _privateConstructorUsedError;
+  set type(int? value) => throw _privateConstructorUsedError;
+  bool? get userControlSetTop => throw _privateConstructorUsedError;
+  set userControlSetTop(bool? value) => throw _privateConstructorUsedError;
+  int? get visible => throw _privateConstructorUsedError;
+  set visible(int? value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $WxArticleBeanCopyWith<WxArticleBean> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $WxArticleBeanCopyWith<$Res> {
+  factory $WxArticleBeanCopyWith(
+          WxArticleBean value, $Res Function(WxArticleBean) then) =
+      _$WxArticleBeanCopyWithImpl<$Res, WxArticleBean>;
+  @useResult
+  $Res call(
+      {List<dynamic>? articleList,
+      String? author,
+      List<dynamic>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible});
+}
+
+/// @nodoc
+class _$WxArticleBeanCopyWithImpl<$Res, $Val extends WxArticleBean>
+    implements $WxArticleBeanCopyWith<$Res> {
+  _$WxArticleBeanCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articleList = freezed,
+    Object? author = freezed,
+    Object? children = freezed,
+    Object? courseId = freezed,
+    Object? cover = freezed,
+    Object? desc = freezed,
+    Object? id = freezed,
+    Object? lisense = freezed,
+    Object? lisenseLink = freezed,
+    Object? name = freezed,
+    Object? order = freezed,
+    Object? parentChapterId = freezed,
+    Object? type = freezed,
+    Object? userControlSetTop = freezed,
+    Object? visible = freezed,
+  }) {
+    return _then(_value.copyWith(
+      articleList: freezed == articleList
+          ? _value.articleList
+          : articleList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      children: freezed == children
+          ? _value.children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      courseId: freezed == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cover: freezed == cover
+          ? _value.cover
+          : cover // ignore: cast_nullable_to_non_nullable
+              as String?,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lisense: freezed == lisense
+          ? _value.lisense
+          : lisense // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lisenseLink: freezed == lisenseLink
+          ? _value.lisenseLink
+          : lisenseLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      order: freezed == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentChapterId: freezed == parentChapterId
+          ? _value.parentChapterId
+          : parentChapterId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      userControlSetTop: freezed == userControlSetTop
+          ? _value.userControlSetTop
+          : userControlSetTop // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      visible: freezed == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$WxArticleBeanImplCopyWith<$Res>
+    implements $WxArticleBeanCopyWith<$Res> {
+  factory _$$WxArticleBeanImplCopyWith(
+          _$WxArticleBeanImpl value, $Res Function(_$WxArticleBeanImpl) then) =
+      __$$WxArticleBeanImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {List<dynamic>? articleList,
+      String? author,
+      List<dynamic>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible});
+}
+
+/// @nodoc
+class __$$WxArticleBeanImplCopyWithImpl<$Res>
+    extends _$WxArticleBeanCopyWithImpl<$Res, _$WxArticleBeanImpl>
+    implements _$$WxArticleBeanImplCopyWith<$Res> {
+  __$$WxArticleBeanImplCopyWithImpl(
+      _$WxArticleBeanImpl _value, $Res Function(_$WxArticleBeanImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articleList = freezed,
+    Object? author = freezed,
+    Object? children = freezed,
+    Object? courseId = freezed,
+    Object? cover = freezed,
+    Object? desc = freezed,
+    Object? id = freezed,
+    Object? lisense = freezed,
+    Object? lisenseLink = freezed,
+    Object? name = freezed,
+    Object? order = freezed,
+    Object? parentChapterId = freezed,
+    Object? type = freezed,
+    Object? userControlSetTop = freezed,
+    Object? visible = freezed,
+  }) {
+    return _then(_$WxArticleBeanImpl(
+      articleList: freezed == articleList
+          ? _value.articleList
+          : articleList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      children: freezed == children
+          ? _value.children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      courseId: freezed == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cover: freezed == cover
+          ? _value.cover
+          : cover // ignore: cast_nullable_to_non_nullable
+              as String?,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lisense: freezed == lisense
+          ? _value.lisense
+          : lisense // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lisenseLink: freezed == lisenseLink
+          ? _value.lisenseLink
+          : lisenseLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      order: freezed == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentChapterId: freezed == parentChapterId
+          ? _value.parentChapterId
+          : parentChapterId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      userControlSetTop: freezed == userControlSetTop
+          ? _value.userControlSetTop
+          : userControlSetTop // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      visible: freezed == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$WxArticleBeanImpl implements _WxArticleBean {
+  _$WxArticleBeanImpl(
+      {this.articleList,
+      this.author,
+      this.children,
+      this.courseId,
+      this.cover,
+      this.desc,
+      this.id,
+      this.lisense,
+      this.lisenseLink,
+      this.name,
+      this.order,
+      this.parentChapterId,
+      this.type,
+      this.userControlSetTop,
+      this.visible});
+
+  factory _$WxArticleBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WxArticleBeanImplFromJson(json);
+
+  @override
+  List<dynamic>? articleList;
+  @override
+  String? author;
+  @override
+  List<dynamic>? children;
+  @override
+  int? courseId;
+  @override
+  String? cover;
+  @override
+  String? desc;
+  @override
+  int? id;
+  @override
+  String? lisense;
+  @override
+  String? lisenseLink;
+  @override
+  String? name;
+  @override
+  int? order;
+  @override
+  int? parentChapterId;
+  @override
+  int? type;
+  @override
+  bool? userControlSetTop;
+  @override
+  int? visible;
+
+  @override
+  String toString() {
+    return 'WxArticleBean(articleList: $articleList, author: $author, children: $children, courseId: $courseId, cover: $cover, desc: $desc, id: $id, lisense: $lisense, lisenseLink: $lisenseLink, name: $name, order: $order, parentChapterId: $parentChapterId, type: $type, userControlSetTop: $userControlSetTop, visible: $visible)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WxArticleBeanImplCopyWith<_$WxArticleBeanImpl> get copyWith =>
+      __$$WxArticleBeanImplCopyWithImpl<_$WxArticleBeanImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$WxArticleBeanImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _WxArticleBean implements WxArticleBean {
+  factory _WxArticleBean(
+      {List<dynamic>? articleList,
+      String? author,
+      List<dynamic>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible}) = _$WxArticleBeanImpl;
+
+  factory _WxArticleBean.fromJson(Map<String, dynamic> json) =
+      _$WxArticleBeanImpl.fromJson;
+
+  @override
+  List<dynamic>? get articleList;
+  set articleList(List<dynamic>? value);
+  @override
+  String? get author;
+  set author(String? value);
+  @override
+  List<dynamic>? get children;
+  set children(List<dynamic>? value);
+  @override
+  int? get courseId;
+  set courseId(int? value);
+  @override
+  String? get cover;
+  set cover(String? value);
+  @override
+  String? get desc;
+  set desc(String? value);
+  @override
+  int? get id;
+  set id(int? value);
+  @override
+  String? get lisense;
+  set lisense(String? value);
+  @override
+  String? get lisenseLink;
+  set lisenseLink(String? value);
+  @override
+  String? get name;
+  set name(String? value);
+  @override
+  int? get order;
+  set order(int? value);
+  @override
+  int? get parentChapterId;
+  set parentChapterId(int? value);
+  @override
+  int? get type;
+  set type(int? value);
+  @override
+  bool? get userControlSetTop;
+  set userControlSetTop(bool? value);
+  @override
+  int? get visible;
+  set visible(int? value);
+  @override
+  @JsonKey(ignore: true)
+  _$$WxArticleBeanImplCopyWith<_$WxArticleBeanImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

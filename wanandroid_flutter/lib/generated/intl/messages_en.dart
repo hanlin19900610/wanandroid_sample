@@ -82,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "backHome": MessageLookupByLibrary.simpleMessage("Back Home"),
         "browser": MessageLookupByLibrary.simpleMessage("Browser"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "change": MessageLookupByLibrary.simpleMessage("Change"),
         "clear": MessageLookupByLibrary.simpleMessage("Clear"),
         "clearCache": MessageLookupByLibrary.simpleMessage("Clear Cache"),
         "clearCacheWarning": MessageLookupByLibrary.simpleMessage(
@@ -235,6 +236,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "usernameEmptyTips":
             MessageLookupByLibrary.simpleMessage("Please enter username"),
         "warning": MessageLookupByLibrary.simpleMessage("Warning"),
+        "weChatOfficialAccount":
+            MessageLookupByLibrary.simpleMessage("WeChat Official Acc1ount"),
         "yearsAgo": m12
       };
 }

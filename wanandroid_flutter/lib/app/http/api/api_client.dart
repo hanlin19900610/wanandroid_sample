@@ -33,6 +33,10 @@ abstract class ApiClient {
   @GET('/article/list/{page}/json')
   Future<PaginationData<ArticleBean>> getArticleList(@Path() int page);
 
+  /// 微信公众号列表
+  @GET('/wxarticle/chapters/json')
+  Future<List<WxArticleBean>> getWxArticleList();
+
 }
 
 @Riverpod(keepAlive: true)
