@@ -22,16 +22,16 @@ mixin LoadMoreMixin<T> {
       data: (List<T> list) async {
         /// Prevents no data indicator from being displayed even when no data
         /// is available
-        if (list.isEmpty) {
-          _refreshController.finishLoad(IndicatorResult.noMore);
-          return;
-        }
-
-        /// Prevent no data state not being set on initialization
-        if (list.length < pageSize) {
-          _refreshController.finishLoad(IndicatorResult.noMore);
-          return;
-        }
+        // if (list.isEmpty) {
+        //   _refreshController.finishLoad(IndicatorResult.noMore);
+        //   return;
+        // }
+        //
+        // /// Prevent no data state not being set on initialization
+        // if (list.length < pageSize) {
+        //   _refreshController.finishLoad(IndicatorResult.noMore);
+        //   return;
+        // }
 
         try {
           /// Some api's pageNum will be self-increasing, some won't, so here
@@ -45,11 +45,11 @@ mixin LoadMoreMixin<T> {
           state = AsyncData<List<T>>(
             list..addAll(value),
           );
-          if (value.length < pageSize) {
-            _refreshController.finishLoad(IndicatorResult.noMore);
-          } else {
-            _refreshController.finishLoad(IndicatorResult.success);
-          }
+          // if (value.length < pageSize) {
+          //   _refreshController.finishLoad(IndicatorResult.noMore);
+          // } else {
+          //   _refreshController.finishLoad(IndicatorResult.success);
+          // }
 
           return;
         } on Exception catch (_) {

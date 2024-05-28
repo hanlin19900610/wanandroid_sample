@@ -37,6 +37,14 @@ abstract class ApiClient {
   @GET('/wxarticle/chapters/json')
   Future<List<WxArticleBean>> getWxArticleList();
 
+  /// 问答列表
+  @GET('/wenda/list/{page}/json')
+  Future<PaginationData<ArticleBean>> getWenDaArticleList(@Path() int page);
+
+  /// 广场列表
+  @GET('/user_article/list/{page}/json')
+  Future<PaginationData<ArticleBean>> getUserArticleList(@Path() int page);
+
 }
 
 @Riverpod(keepAlive: true)

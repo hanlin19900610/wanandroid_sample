@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wanandroid_flutter/core/utils/html_parse_utils.dart';
 import 'package:wanandroid_flutter/lib.dart';
@@ -16,7 +18,9 @@ class ArticleItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        ToastUtils.show('点击文章, 查看详情');
+      },
       child: Container(
         width: double.infinity,
         margin: EdgeInsets.only(top: 10.h, left: 10.w, right: 10.w),
@@ -45,17 +49,26 @@ class ArticleItem extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
-          article.author != null && article.author?.isNotEmpty == true
-              ? article.author!
-              : article.shareUser!,
-          style: TextStyle(
-            fontSize: 12.sp,
-            color: Colors.black,
+        GestureDetector(
+          onTap: () {
+            ToastUtils.show('点击作者, 查看作者详情');
+          },
+          child: Text(
+            article.author != null && article.author?.isNotEmpty == true
+                ? article.author!
+                : article.shareUser!,
+            style: TextStyle(
+              fontSize: 12.sp,
+              color: Colors.black,
+            ),
           ),
         ),
         Text(article.publishTime?.toDateTimeTranslation(context) ?? ''),
-        Text(article.chapterName ?? '')
+        GestureDetector(
+            onTap: () {
+              ToastUtils.show('点击项目, 查看项目详情');
+            },
+            child: Text(article.chapterName ?? ''))
       ].fold<List<Widget>>(
         <Widget>[],
         (List<Widget> children, Widget child) =>
@@ -91,7 +104,7 @@ class ArticleItem extends StatelessWidget {
     );
   }
 
-  /// 构建标题
+  /// 构建底部便签
   Widget _buildBottom(BuildContext context) {
     final bool isShare = article.author.strictValue == null;
     return Wrap(
@@ -103,10 +116,15 @@ class ArticleItem extends StatelessWidget {
         ),
         ...article.tags
                 ?.map(
-                  (ArticleTagsBean? tag) => _TagTile(
-                    key: UniqueKey(),
-                    text: HTMLParseUtils.unescapeHTML(tag?.name) ?? '',
-                    color: context.theme.hintColor,
+                  (ArticleTagsBean? tag) => GestureDetector(
+                    onTap: () {
+                      ToastUtils.show('点击标签, 查看标签详情');
+                    },
+                    child: _TagTile(
+                      key: UniqueKey(),
+                      text: HTMLParseUtils.unescapeHTML(tag?.name) ?? '',
+                      color: context.theme.hintColor,
+                    ),
                   ),
                 )
                 .toList() ??

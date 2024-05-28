@@ -5,6 +5,9 @@ import 'package:wanandroid_flutter/lib.dart';
 
 part 'home_provider.g.dart';
 
+part 'qa_provider.dart';
+part 'square_provider.dart';
+
 @riverpod
 class HomeWxArticleList extends _$HomeWxArticleList{
   late ApiClient _apiClient;
@@ -15,6 +18,7 @@ class HomeWxArticleList extends _$HomeWxArticleList{
   void changeWxArticle() {
     currentWxArticleList.clear();
     currentWxArticleList.addAll(wxArticleList.random(4));
+    state = AsyncData(currentWxArticleList);
   }
 
   @override
@@ -60,7 +64,9 @@ class HomeArticleList extends _$HomeArticleList
       }
       var articlePage = await _apiClient.getArticleList(pageNum);
       if (pageNum == 0) {
-        refreshController.finishRefresh(articlePage.datas.length < pageSize ? IndicatorResult.noMore: IndicatorResult.success, true);
+        refreshController.finishRefresh(articlePage.over ? IndicatorResult.noMore: IndicatorResult.success, true);
+      }else{
+        refreshController.finishLoad(articlePage.over ? IndicatorResult.noMore: IndicatorResult.success, true);
       }
       var list = <ArticleBean>[];
       for (var element in articleTopList) {
@@ -72,6 +78,8 @@ class HomeArticleList extends _$HomeArticleList
     }catch(e,s){
       if (pageNum == 0) {
         refreshController.finishRefresh(IndicatorResult.fail, true);
+      }else{
+        refreshController.finishLoad(IndicatorResult.fail, true);
       }
       return [];
     }

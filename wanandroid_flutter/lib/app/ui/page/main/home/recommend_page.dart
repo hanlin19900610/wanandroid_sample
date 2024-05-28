@@ -11,6 +11,7 @@ import 'package:wanandroid_flutter/app/widget/loading_widget.dart';
 import 'package:wanandroid_flutter/lib.dart';
 
 import 'widgets/article_item.dart';
+import 'widgets/wxarticle_item.dart';
 
 class RecommendPage extends ConsumerStatefulWidget {
   const RecommendPage({super.key});
@@ -44,22 +45,18 @@ class _RecommendPageState extends ConsumerState<RecommendPage>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Consumer(
-      builder: (context, ref, child) {
-        return EasyRefresh(
-            controller: ref.watch(provider.notifier).refreshController,
-            onRefresh: onRetry,
-            onLoad: loadMore,
-            child: ref.watch(provider).when(
-                  data: (List<ArticleBean> list) {
-                    return _buildContent(list);
-                  },
-                  error: (obj, stackTrace) => CustomErrorWidget.withOtherError(
-                      BaseLibs.httpConfig.getDioError(obj)),
-                  loading: () => const LoadingWidget(),
-                ));
-      },
-    );
+    return EasyRefresh(
+        controller: ref.watch(provider.notifier).refreshController,
+        onRefresh: onRetry,
+        onLoad: loadMore,
+        child: ref.watch(provider).when(
+              data: (List<ArticleBean> list) {
+                return _buildContent(list);
+              },
+              error: (obj, stackTrace) => CustomErrorWidget.withOtherError(
+                  BaseLibs.httpConfig.getDioError(obj)),
+              loading: () => const LoadingWidget(),
+            ));
   }
 
   Widget _buildContent(List<ArticleBean> list) {
@@ -101,31 +98,39 @@ class _RecommendPageState extends ConsumerState<RecommendPage>
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(S.of(context).weChatOfficialAccount, style: TextStyle(color: Colors.black, fontSize: 16.sp, fontWeight: FontWeight.bold),),
+                  Text(
+                    S.of(context).weChatOfficialAccount,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.bold),
+                  ),
                   TDButton(
                     text: S.of(context).change,
                     type: TDButtonType.text,
                     size: TDButtonSize.small,
                     textStyle: TextStyle(color: Colors.grey, fontSize: 12.sp),
-                    iconWidget: Icon(Icons.change_circle, color: Colors.grey.withOpacity(0.6),),
-                    onTap: (){
-                      ref.read(homeWxArticleListProvider.notifier).changeWxArticle();
+                    iconWidget: Icon(
+                      Icons.change_circle,
+                      color: Colors.grey.withOpacity(0.6),
+                    ),
+                    onTap: () {
+                      ref
+                          .read(homeWxArticleListProvider.notifier)
+                          .changeWxArticle();
                     },
                   ),
                 ],
               ),
               MFSizedBox.height(5.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ...ref.watch(homeWxArticleListProvider.notifier).currentWxArticleList.map((e) => Container(
-                    width: 50,
-                    height: 100,
-                    color: Colors.red,
-                    child: Text(e.name??''),
-                  ))
-                ],
-              ),
+              ref.watch(homeWxArticleListProvider).when(
+                  data: (list) => Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [...list.map((e) => WxArticleItem(wx: e))],
+                      ),
+                  error: (Object error, StackTrace stackTrace) =>
+                      const SizedBox(),
+                  loading: () => const SizedBox()),
             ],
           ),
         ).sliver(),
