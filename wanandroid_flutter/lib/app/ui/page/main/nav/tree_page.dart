@@ -13,7 +13,7 @@ class TreePage extends ConsumerStatefulWidget {
   ConsumerState createState() => _TreePageState();
 }
 
-class _TreePageState extends ConsumerState<TreePage> {
+class _TreePageState extends ConsumerState<TreePage> with AutomaticKeepAliveClientMixin{
   var currentValue = 0;
   final ItemScrollController itemScrollController = ItemScrollController();
   final ItemPositionsListener itemPositionsListener =
@@ -85,6 +85,7 @@ class _TreePageState extends ConsumerState<TreePage> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return ref.watch(treeListProvider).when(
           data: (List<TreeBean> list) => _buildAnchorSideBar(context, list),
           error: (obj, s) => CustomErrorWidget.withOtherError(
@@ -196,4 +197,7 @@ class _TreePageState extends ConsumerState<TreePage> {
       shape: TDTagShape.round,
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

@@ -274,3 +274,19 @@ Map<String, dynamic> _$$TreeChildrenBeanImplToJson(
       'userControlSetTop': instance.userControlSetTop,
       'visible': instance.visible,
     };
+
+_$NaviBeanImpl _$$NaviBeanImplFromJson(Map<String, dynamic> json) =>
+    _$NaviBeanImpl(
+      articles: (json['articles'] as List<dynamic>?)
+          ?.map((e) => ArticleBean.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      cid: json['cid'] as int?,
+      name: json['name'] as String?,
+    );
+
+Map<String, dynamic> _$$NaviBeanImplToJson(_$NaviBeanImpl instance) =>
+    <String, dynamic>{
+      'articles': instance.articles,
+      'cid': instance.cid,
+      'name': instance.name,
+    };

@@ -49,6 +49,10 @@ abstract class ApiClient {
   @GET('/tree/json')
   Future<List<TreeBean>> getTreeList();
 
+  /// 导航数据
+  @GET('/navi/json')
+  Future<List<NaviBean>> getNaviList();
+
 }
 
 @Riverpod(keepAlive: true)

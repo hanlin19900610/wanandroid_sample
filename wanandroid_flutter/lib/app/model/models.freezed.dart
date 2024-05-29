@@ -2851,3 +2851,163 @@ abstract class _TreeChildrenBean implements TreeChildrenBean {
   _$$TreeChildrenBeanImplCopyWith<_$TreeChildrenBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+NaviBean _$NaviBeanFromJson(Map<String, dynamic> json) {
+  return _NaviBean.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NaviBean {
+  List<ArticleBean>? get articles => throw _privateConstructorUsedError;
+  set articles(List<ArticleBean>? value) => throw _privateConstructorUsedError;
+  int? get cid => throw _privateConstructorUsedError;
+  set cid(int? value) => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  set name(String? value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NaviBeanCopyWith<NaviBean> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NaviBeanCopyWith<$Res> {
+  factory $NaviBeanCopyWith(NaviBean value, $Res Function(NaviBean) then) =
+      _$NaviBeanCopyWithImpl<$Res, NaviBean>;
+  @useResult
+  $Res call({List<ArticleBean>? articles, int? cid, String? name});
+}
+
+/// @nodoc
+class _$NaviBeanCopyWithImpl<$Res, $Val extends NaviBean>
+    implements $NaviBeanCopyWith<$Res> {
+  _$NaviBeanCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articles = freezed,
+    Object? cid = freezed,
+    Object? name = freezed,
+  }) {
+    return _then(_value.copyWith(
+      articles: freezed == articles
+          ? _value.articles
+          : articles // ignore: cast_nullable_to_non_nullable
+              as List<ArticleBean>?,
+      cid: freezed == cid
+          ? _value.cid
+          : cid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$NaviBeanImplCopyWith<$Res>
+    implements $NaviBeanCopyWith<$Res> {
+  factory _$$NaviBeanImplCopyWith(
+          _$NaviBeanImpl value, $Res Function(_$NaviBeanImpl) then) =
+      __$$NaviBeanImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<ArticleBean>? articles, int? cid, String? name});
+}
+
+/// @nodoc
+class __$$NaviBeanImplCopyWithImpl<$Res>
+    extends _$NaviBeanCopyWithImpl<$Res, _$NaviBeanImpl>
+    implements _$$NaviBeanImplCopyWith<$Res> {
+  __$$NaviBeanImplCopyWithImpl(
+      _$NaviBeanImpl _value, $Res Function(_$NaviBeanImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articles = freezed,
+    Object? cid = freezed,
+    Object? name = freezed,
+  }) {
+    return _then(_$NaviBeanImpl(
+      articles: freezed == articles
+          ? _value.articles
+          : articles // ignore: cast_nullable_to_non_nullable
+              as List<ArticleBean>?,
+      cid: freezed == cid
+          ? _value.cid
+          : cid // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NaviBeanImpl implements _NaviBean {
+  _$NaviBeanImpl({this.articles, this.cid, this.name});
+
+  factory _$NaviBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NaviBeanImplFromJson(json);
+
+  @override
+  List<ArticleBean>? articles;
+  @override
+  int? cid;
+  @override
+  String? name;
+
+  @override
+  String toString() {
+    return 'NaviBean(articles: $articles, cid: $cid, name: $name)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NaviBeanImplCopyWith<_$NaviBeanImpl> get copyWith =>
+      __$$NaviBeanImplCopyWithImpl<_$NaviBeanImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NaviBeanImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NaviBean implements NaviBean {
+  factory _NaviBean({List<ArticleBean>? articles, int? cid, String? name}) =
+      _$NaviBeanImpl;
+
+  factory _NaviBean.fromJson(Map<String, dynamic> json) =
+      _$NaviBeanImpl.fromJson;
+
+  @override
+  List<ArticleBean>? get articles;
+  set articles(List<ArticleBean>? value);
+  @override
+  int? get cid;
+  set cid(int? value);
+  @override
+  String? get name;
+  set name(String? value);
+  @override
+  @JsonKey(ignore: true)
+  _$$NaviBeanImplCopyWith<_$NaviBeanImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

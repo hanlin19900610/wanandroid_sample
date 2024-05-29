@@ -6,6 +6,7 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 import 'package:wanandroid_flutter/app/ui/page/main/nav/tree_page.dart';
 
 import '../../../../../lib.dart';
+import 'navi_page.dart';
 
 class NavPage extends ConsumerStatefulWidget {
   const NavPage({super.key});
@@ -19,14 +20,13 @@ class _NavPageState extends ConsumerState<NavPage>
   var tabs = [
     TDTab(text: S.current.tree),
     TDTab(text: S.current.nav),
-    TDTab(text: S.current.tools)
   ];
 
   late TabController _controller;
 
   @override
   void initState() {
-    _controller = TabController(length: 3, vsync: this);
+    _controller = TabController(length: tabs.length, vsync: this);
     super.initState();
   }
 
@@ -79,10 +79,9 @@ class _NavPageState extends ConsumerState<NavPage>
       child: TDTabBarView(
         controller: _controller,
         isSlideSwitch: true,
-        children: [
+        children: const [
           TreePage(),
-          Container(),
-          Container()
+          NaviPage(),
         ],
       ),
     );
