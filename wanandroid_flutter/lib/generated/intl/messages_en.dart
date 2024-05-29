@@ -220,8 +220,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "title": MessageLookupByLibrary.simpleMessage("Title"),
         "titleEmptyTips":
             MessageLookupByLibrary.simpleMessage("Please enter title"),
+        "tools": MessageLookupByLibrary.simpleMessage("Tools"),
         "top": MessageLookupByLibrary.simpleMessage("Top"),
         "totalPoints": MessageLookupByLibrary.simpleMessage("Total Points"),
+        "tree": MessageLookupByLibrary.simpleMessage("Tree"),
         "unableToOpenLink": m11,
         "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "unknownError": MessageLookupByLibrary.simpleMessage("Unknown Error"),

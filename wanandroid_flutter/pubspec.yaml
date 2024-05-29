@@ -20,6 +20,7 @@ dependencies:
   # custom
   cookie_jar: ^4.0.8
   dio_cookie_manager: ^3.1.1
+  scrollable_positioned_list: ^0.3.8
 
   # Basic
   oktoast: ^3.4.0

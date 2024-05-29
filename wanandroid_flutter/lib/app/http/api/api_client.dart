@@ -45,6 +45,10 @@ abstract class ApiClient {
   @GET('/user_article/list/{page}/json')
   Future<PaginationData<ArticleBean>> getUserArticleList(@Path() int page);
 
+  /// 体系数据
+  @GET('/tree/json')
+  Future<List<TreeBean>> getTreeList();
+
 }
 
 @Riverpod(keepAlive: true)

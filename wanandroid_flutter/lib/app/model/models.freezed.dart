@@ -2002,3 +2002,852 @@ abstract class _WxArticleBean implements WxArticleBean {
   _$$WxArticleBeanImplCopyWith<_$WxArticleBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+TreeBean _$TreeBeanFromJson(Map<String, dynamic> json) {
+  return _TreeBean.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TreeBean {
+  List<dynamic>? get articleList => throw _privateConstructorUsedError;
+  set articleList(List<dynamic>? value) => throw _privateConstructorUsedError;
+  String? get author => throw _privateConstructorUsedError;
+  set author(String? value) => throw _privateConstructorUsedError;
+  List<TreeChildrenBean>? get children => throw _privateConstructorUsedError;
+  set children(List<TreeChildrenBean>? value) =>
+      throw _privateConstructorUsedError;
+  int? get courseId => throw _privateConstructorUsedError;
+  set courseId(int? value) => throw _privateConstructorUsedError;
+  String? get cover => throw _privateConstructorUsedError;
+  set cover(String? value) => throw _privateConstructorUsedError;
+  String? get desc => throw _privateConstructorUsedError;
+  set desc(String? value) => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  set id(int? value) => throw _privateConstructorUsedError;
+  String? get lisense => throw _privateConstructorUsedError;
+  set lisense(String? value) => throw _privateConstructorUsedError;
+  String? get lisenseLink => throw _privateConstructorUsedError;
+  set lisenseLink(String? value) => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  set name(String? value) => throw _privateConstructorUsedError;
+  int? get order => throw _privateConstructorUsedError;
+  set order(int? value) => throw _privateConstructorUsedError;
+  int? get parentChapterId => throw _privateConstructorUsedError;
+  set parentChapterId(int? value) => throw _privateConstructorUsedError;
+  int? get type => throw _privateConstructorUsedError;
+  set type(int? value) => throw _privateConstructorUsedError;
+  bool? get userControlSetTop => throw _privateConstructorUsedError;
+  set userControlSetTop(bool? value) => throw _privateConstructorUsedError;
+  int? get visible => throw _privateConstructorUsedError;
+  set visible(int? value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TreeBeanCopyWith<TreeBean> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TreeBeanCopyWith<$Res> {
+  factory $TreeBeanCopyWith(TreeBean value, $Res Function(TreeBean) then) =
+      _$TreeBeanCopyWithImpl<$Res, TreeBean>;
+  @useResult
+  $Res call(
+      {List<dynamic>? articleList,
+      String? author,
+      List<TreeChildrenBean>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible});
+}
+
+/// @nodoc
+class _$TreeBeanCopyWithImpl<$Res, $Val extends TreeBean>
+    implements $TreeBeanCopyWith<$Res> {
+  _$TreeBeanCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articleList = freezed,
+    Object? author = freezed,
+    Object? children = freezed,
+    Object? courseId = freezed,
+    Object? cover = freezed,
+    Object? desc = freezed,
+    Object? id = freezed,
+    Object? lisense = freezed,
+    Object? lisenseLink = freezed,
+    Object? name = freezed,
+    Object? order = freezed,
+    Object? parentChapterId = freezed,
+    Object? type = freezed,
+    Object? userControlSetTop = freezed,
+    Object? visible = freezed,
+  }) {
+    return _then(_value.copyWith(
+      articleList: freezed == articleList
+          ? _value.articleList
+          : articleList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      children: freezed == children
+          ? _value.children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<TreeChildrenBean>?,
+      courseId: freezed == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cover: freezed == cover
+          ? _value.cover
+          : cover // ignore: cast_nullable_to_non_nullable
+              as String?,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lisense: freezed == lisense
+          ? _value.lisense
+          : lisense // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lisenseLink: freezed == lisenseLink
+          ? _value.lisenseLink
+          : lisenseLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      order: freezed == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentChapterId: freezed == parentChapterId
+          ? _value.parentChapterId
+          : parentChapterId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      userControlSetTop: freezed == userControlSetTop
+          ? _value.userControlSetTop
+          : userControlSetTop // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      visible: freezed == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TreeBeanImplCopyWith<$Res>
+    implements $TreeBeanCopyWith<$Res> {
+  factory _$$TreeBeanImplCopyWith(
+          _$TreeBeanImpl value, $Res Function(_$TreeBeanImpl) then) =
+      __$$TreeBeanImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {List<dynamic>? articleList,
+      String? author,
+      List<TreeChildrenBean>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible});
+}
+
+/// @nodoc
+class __$$TreeBeanImplCopyWithImpl<$Res>
+    extends _$TreeBeanCopyWithImpl<$Res, _$TreeBeanImpl>
+    implements _$$TreeBeanImplCopyWith<$Res> {
+  __$$TreeBeanImplCopyWithImpl(
+      _$TreeBeanImpl _value, $Res Function(_$TreeBeanImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articleList = freezed,
+    Object? author = freezed,
+    Object? children = freezed,
+    Object? courseId = freezed,
+    Object? cover = freezed,
+    Object? desc = freezed,
+    Object? id = freezed,
+    Object? lisense = freezed,
+    Object? lisenseLink = freezed,
+    Object? name = freezed,
+    Object? order = freezed,
+    Object? parentChapterId = freezed,
+    Object? type = freezed,
+    Object? userControlSetTop = freezed,
+    Object? visible = freezed,
+  }) {
+    return _then(_$TreeBeanImpl(
+      articleList: freezed == articleList
+          ? _value.articleList
+          : articleList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      children: freezed == children
+          ? _value.children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<TreeChildrenBean>?,
+      courseId: freezed == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cover: freezed == cover
+          ? _value.cover
+          : cover // ignore: cast_nullable_to_non_nullable
+              as String?,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lisense: freezed == lisense
+          ? _value.lisense
+          : lisense // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lisenseLink: freezed == lisenseLink
+          ? _value.lisenseLink
+          : lisenseLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      order: freezed == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentChapterId: freezed == parentChapterId
+          ? _value.parentChapterId
+          : parentChapterId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      userControlSetTop: freezed == userControlSetTop
+          ? _value.userControlSetTop
+          : userControlSetTop // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      visible: freezed == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TreeBeanImpl implements _TreeBean {
+  _$TreeBeanImpl(
+      {this.articleList,
+      this.author,
+      this.children,
+      this.courseId,
+      this.cover,
+      this.desc,
+      this.id,
+      this.lisense,
+      this.lisenseLink,
+      this.name,
+      this.order,
+      this.parentChapterId,
+      this.type,
+      this.userControlSetTop,
+      this.visible});
+
+  factory _$TreeBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TreeBeanImplFromJson(json);
+
+  @override
+  List<dynamic>? articleList;
+  @override
+  String? author;
+  @override
+  List<TreeChildrenBean>? children;
+  @override
+  int? courseId;
+  @override
+  String? cover;
+  @override
+  String? desc;
+  @override
+  int? id;
+  @override
+  String? lisense;
+  @override
+  String? lisenseLink;
+  @override
+  String? name;
+  @override
+  int? order;
+  @override
+  int? parentChapterId;
+  @override
+  int? type;
+  @override
+  bool? userControlSetTop;
+  @override
+  int? visible;
+
+  @override
+  String toString() {
+    return 'TreeBean(articleList: $articleList, author: $author, children: $children, courseId: $courseId, cover: $cover, desc: $desc, id: $id, lisense: $lisense, lisenseLink: $lisenseLink, name: $name, order: $order, parentChapterId: $parentChapterId, type: $type, userControlSetTop: $userControlSetTop, visible: $visible)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TreeBeanImplCopyWith<_$TreeBeanImpl> get copyWith =>
+      __$$TreeBeanImplCopyWithImpl<_$TreeBeanImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TreeBeanImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TreeBean implements TreeBean {
+  factory _TreeBean(
+      {List<dynamic>? articleList,
+      String? author,
+      List<TreeChildrenBean>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible}) = _$TreeBeanImpl;
+
+  factory _TreeBean.fromJson(Map<String, dynamic> json) =
+      _$TreeBeanImpl.fromJson;
+
+  @override
+  List<dynamic>? get articleList;
+  set articleList(List<dynamic>? value);
+  @override
+  String? get author;
+  set author(String? value);
+  @override
+  List<TreeChildrenBean>? get children;
+  set children(List<TreeChildrenBean>? value);
+  @override
+  int? get courseId;
+  set courseId(int? value);
+  @override
+  String? get cover;
+  set cover(String? value);
+  @override
+  String? get desc;
+  set desc(String? value);
+  @override
+  int? get id;
+  set id(int? value);
+  @override
+  String? get lisense;
+  set lisense(String? value);
+  @override
+  String? get lisenseLink;
+  set lisenseLink(String? value);
+  @override
+  String? get name;
+  set name(String? value);
+  @override
+  int? get order;
+  set order(int? value);
+  @override
+  int? get parentChapterId;
+  set parentChapterId(int? value);
+  @override
+  int? get type;
+  set type(int? value);
+  @override
+  bool? get userControlSetTop;
+  set userControlSetTop(bool? value);
+  @override
+  int? get visible;
+  set visible(int? value);
+  @override
+  @JsonKey(ignore: true)
+  _$$TreeBeanImplCopyWith<_$TreeBeanImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TreeChildrenBean _$TreeChildrenBeanFromJson(Map<String, dynamic> json) {
+  return _TreeChildrenBean.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TreeChildrenBean {
+  List<dynamic>? get articleList => throw _privateConstructorUsedError;
+  set articleList(List<dynamic>? value) => throw _privateConstructorUsedError;
+  String? get author => throw _privateConstructorUsedError;
+  set author(String? value) => throw _privateConstructorUsedError;
+  List<dynamic>? get children => throw _privateConstructorUsedError;
+  set children(List<dynamic>? value) => throw _privateConstructorUsedError;
+  int? get courseId => throw _privateConstructorUsedError;
+  set courseId(int? value) => throw _privateConstructorUsedError;
+  String? get cover => throw _privateConstructorUsedError;
+  set cover(String? value) => throw _privateConstructorUsedError;
+  String? get desc => throw _privateConstructorUsedError;
+  set desc(String? value) => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  set id(int? value) => throw _privateConstructorUsedError;
+  String? get lisense => throw _privateConstructorUsedError;
+  set lisense(String? value) => throw _privateConstructorUsedError;
+  String? get lisenseLink => throw _privateConstructorUsedError;
+  set lisenseLink(String? value) => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  set name(String? value) => throw _privateConstructorUsedError;
+  int? get order => throw _privateConstructorUsedError;
+  set order(int? value) => throw _privateConstructorUsedError;
+  int? get parentChapterId => throw _privateConstructorUsedError;
+  set parentChapterId(int? value) => throw _privateConstructorUsedError;
+  int? get type => throw _privateConstructorUsedError;
+  set type(int? value) => throw _privateConstructorUsedError;
+  bool? get userControlSetTop => throw _privateConstructorUsedError;
+  set userControlSetTop(bool? value) => throw _privateConstructorUsedError;
+  int? get visible => throw _privateConstructorUsedError;
+  set visible(int? value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TreeChildrenBeanCopyWith<TreeChildrenBean> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TreeChildrenBeanCopyWith<$Res> {
+  factory $TreeChildrenBeanCopyWith(
+          TreeChildrenBean value, $Res Function(TreeChildrenBean) then) =
+      _$TreeChildrenBeanCopyWithImpl<$Res, TreeChildrenBean>;
+  @useResult
+  $Res call(
+      {List<dynamic>? articleList,
+      String? author,
+      List<dynamic>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible});
+}
+
+/// @nodoc
+class _$TreeChildrenBeanCopyWithImpl<$Res, $Val extends TreeChildrenBean>
+    implements $TreeChildrenBeanCopyWith<$Res> {
+  _$TreeChildrenBeanCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articleList = freezed,
+    Object? author = freezed,
+    Object? children = freezed,
+    Object? courseId = freezed,
+    Object? cover = freezed,
+    Object? desc = freezed,
+    Object? id = freezed,
+    Object? lisense = freezed,
+    Object? lisenseLink = freezed,
+    Object? name = freezed,
+    Object? order = freezed,
+    Object? parentChapterId = freezed,
+    Object? type = freezed,
+    Object? userControlSetTop = freezed,
+    Object? visible = freezed,
+  }) {
+    return _then(_value.copyWith(
+      articleList: freezed == articleList
+          ? _value.articleList
+          : articleList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      children: freezed == children
+          ? _value.children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      courseId: freezed == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cover: freezed == cover
+          ? _value.cover
+          : cover // ignore: cast_nullable_to_non_nullable
+              as String?,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lisense: freezed == lisense
+          ? _value.lisense
+          : lisense // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lisenseLink: freezed == lisenseLink
+          ? _value.lisenseLink
+          : lisenseLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      order: freezed == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentChapterId: freezed == parentChapterId
+          ? _value.parentChapterId
+          : parentChapterId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      userControlSetTop: freezed == userControlSetTop
+          ? _value.userControlSetTop
+          : userControlSetTop // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      visible: freezed == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TreeChildrenBeanImplCopyWith<$Res>
+    implements $TreeChildrenBeanCopyWith<$Res> {
+  factory _$$TreeChildrenBeanImplCopyWith(_$TreeChildrenBeanImpl value,
+          $Res Function(_$TreeChildrenBeanImpl) then) =
+      __$$TreeChildrenBeanImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {List<dynamic>? articleList,
+      String? author,
+      List<dynamic>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible});
+}
+
+/// @nodoc
+class __$$TreeChildrenBeanImplCopyWithImpl<$Res>
+    extends _$TreeChildrenBeanCopyWithImpl<$Res, _$TreeChildrenBeanImpl>
+    implements _$$TreeChildrenBeanImplCopyWith<$Res> {
+  __$$TreeChildrenBeanImplCopyWithImpl(_$TreeChildrenBeanImpl _value,
+      $Res Function(_$TreeChildrenBeanImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? articleList = freezed,
+    Object? author = freezed,
+    Object? children = freezed,
+    Object? courseId = freezed,
+    Object? cover = freezed,
+    Object? desc = freezed,
+    Object? id = freezed,
+    Object? lisense = freezed,
+    Object? lisenseLink = freezed,
+    Object? name = freezed,
+    Object? order = freezed,
+    Object? parentChapterId = freezed,
+    Object? type = freezed,
+    Object? userControlSetTop = freezed,
+    Object? visible = freezed,
+  }) {
+    return _then(_$TreeChildrenBeanImpl(
+      articleList: freezed == articleList
+          ? _value.articleList
+          : articleList // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      children: freezed == children
+          ? _value.children
+          : children // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
+      courseId: freezed == courseId
+          ? _value.courseId
+          : courseId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      cover: freezed == cover
+          ? _value.cover
+          : cover // ignore: cast_nullable_to_non_nullable
+              as String?,
+      desc: freezed == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lisense: freezed == lisense
+          ? _value.lisense
+          : lisense // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lisenseLink: freezed == lisenseLink
+          ? _value.lisenseLink
+          : lisenseLink // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      order: freezed == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as int?,
+      parentChapterId: freezed == parentChapterId
+          ? _value.parentChapterId
+          : parentChapterId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as int?,
+      userControlSetTop: freezed == userControlSetTop
+          ? _value.userControlSetTop
+          : userControlSetTop // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      visible: freezed == visible
+          ? _value.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TreeChildrenBeanImpl implements _TreeChildrenBean {
+  _$TreeChildrenBeanImpl(
+      {this.articleList,
+      this.author,
+      this.children,
+      this.courseId,
+      this.cover,
+      this.desc,
+      this.id,
+      this.lisense,
+      this.lisenseLink,
+      this.name,
+      this.order,
+      this.parentChapterId,
+      this.type,
+      this.userControlSetTop,
+      this.visible});
+
+  factory _$TreeChildrenBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TreeChildrenBeanImplFromJson(json);
+
+  @override
+  List<dynamic>? articleList;
+  @override
+  String? author;
+  @override
+  List<dynamic>? children;
+  @override
+  int? courseId;
+  @override
+  String? cover;
+  @override
+  String? desc;
+  @override
+  int? id;
+  @override
+  String? lisense;
+  @override
+  String? lisenseLink;
+  @override
+  String? name;
+  @override
+  int? order;
+  @override
+  int? parentChapterId;
+  @override
+  int? type;
+  @override
+  bool? userControlSetTop;
+  @override
+  int? visible;
+
+  @override
+  String toString() {
+    return 'TreeChildrenBean(articleList: $articleList, author: $author, children: $children, courseId: $courseId, cover: $cover, desc: $desc, id: $id, lisense: $lisense, lisenseLink: $lisenseLink, name: $name, order: $order, parentChapterId: $parentChapterId, type: $type, userControlSetTop: $userControlSetTop, visible: $visible)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TreeChildrenBeanImplCopyWith<_$TreeChildrenBeanImpl> get copyWith =>
+      __$$TreeChildrenBeanImplCopyWithImpl<_$TreeChildrenBeanImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TreeChildrenBeanImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TreeChildrenBean implements TreeChildrenBean {
+  factory _TreeChildrenBean(
+      {List<dynamic>? articleList,
+      String? author,
+      List<dynamic>? children,
+      int? courseId,
+      String? cover,
+      String? desc,
+      int? id,
+      String? lisense,
+      String? lisenseLink,
+      String? name,
+      int? order,
+      int? parentChapterId,
+      int? type,
+      bool? userControlSetTop,
+      int? visible}) = _$TreeChildrenBeanImpl;
+
+  factory _TreeChildrenBean.fromJson(Map<String, dynamic> json) =
+      _$TreeChildrenBeanImpl.fromJson;
+
+  @override
+  List<dynamic>? get articleList;
+  set articleList(List<dynamic>? value);
+  @override
+  String? get author;
+  set author(String? value);
+  @override
+  List<dynamic>? get children;
+  set children(List<dynamic>? value);
+  @override
+  int? get courseId;
+  set courseId(int? value);
+  @override
+  String? get cover;
+  set cover(String? value);
+  @override
+  String? get desc;
+  set desc(String? value);
+  @override
+  int? get id;
+  set id(int? value);
+  @override
+  String? get lisense;
+  set lisense(String? value);
+  @override
+  String? get lisenseLink;
+  set lisenseLink(String? value);
+  @override
+  String? get name;
+  set name(String? value);
+  @override
+  int? get order;
+  set order(int? value);
+  @override
+  int? get parentChapterId;
+  set parentChapterId(int? value);
+  @override
+  int? get type;
+  set type(int? value);
+  @override
+  bool? get userControlSetTop;
+  set userControlSetTop(bool? value);
+  @override
+  int? get visible;
+  set visible(int? value);
+  @override
+  @JsonKey(ignore: true)
+  _$$TreeChildrenBeanImplCopyWith<_$TreeChildrenBeanImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

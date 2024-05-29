@@ -1386,6 +1386,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Tree`
+  String get tree {
+    return Intl.message(
+      'Tree',
+      name: 'tree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tools`
+  String get tools {
+    return Intl.message(
+      'Tools',
+      name: 'tools',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -10,3 +10,4 @@ part 'home_banner_bean.dart';
 part 'article_bean.dart';
 part 'pagination_data.dart';
 part 'wx_article_bean.dart';
+part 'tree_bean.dart';

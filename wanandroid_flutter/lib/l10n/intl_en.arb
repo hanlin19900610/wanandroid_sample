@@ -282,5 +282,7 @@
   "processing": "Refreshing",
   "successful": "Successful",
   "lastUpdated": "最后更新于 %T",
-  "pullUpLoading": "上拉加载"
+  "pullUpLoading": "上拉加载",
+  "tree": "Tree",
+  "tools": "Tools"
 }
