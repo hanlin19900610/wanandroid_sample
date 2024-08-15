@@ -26,7 +26,7 @@ class _NavPageState extends ConsumerState<NavPage>
 
   @override
   void initState() {
-    _controller = TabController(length: tabs.length, vsync: this);
+    _controller = TabController(length: 3, vsync: this);
     super.initState();
   }
 

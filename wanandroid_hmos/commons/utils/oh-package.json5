@@ -1,0 +1,13 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@tencent/mmkv": "^1.3.7",
+    "@pura/harmony-utils": "^1.0.3",
+    "@hzw/zrouter": "^1.0.1"
+  }
+}
